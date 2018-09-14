@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    box-sizing: border-box; 
+}
+
+html {
+    --color-background:         #3351EB;
+    --color-section:            aliceblue;
+    --color-section-fg:         #333333;
+    --color-section-head:       #4D68FF;
+    --color-section-head-fg:    #FFFFFF;
+}
+
+body {
+    padding: 1em;
+    background-color: var(--color-background);
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0;
+}
+
+dt {
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+section {
+    margin-bottom: 1em;
+    /* Slightly lighter background */
+    background-color: var(--color-section);
+    border-radius: .05em;
+    color: var(--color-section-fg);
+}
+
+section .head {
+    padding: .2em;
+    font-weight: bold;
+    font-size: 20pt;
+    color: var(--color-section-head-fg);
+    background-color: var(--color-section-head);
+}
+
+section > div {
+    padding: .5em;
+}
+
+section#products > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+    box-sizing: border-box;
+}
+
+.item .img-wrapper {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+.item img {
+    width: 100%;
+}

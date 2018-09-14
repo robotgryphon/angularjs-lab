@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Products</title>
+  <script src="/app/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/app/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/app/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="./products.css" />
+
+  <script src="/app/node_modules/angular/angular.min.js"></script>
+  <script src="/app/node_modules/angular-route/angular-route.min.js"></script>
+
+  <script src="../shared/shared.module.js"></script>
+  <script src="../shared/cart.factory.js"></script>
+  <script src="../shared/product.service.js"></script>
+
+  <script src="./products.module.js"></script>
+  <script src="./controllers/product.controller.js"></script>
+  <script src="./controllers/product-search.controller.js"></script>
+  <script src="./controllers/product-detail.controller.js"></script>
+</head>
+
+<body class="container" ng-app="products">
+  <div ng-include="'/app/view/header.html'"></div>
+  <main class="row">
+    <section ng-view></section>
+  </main>
+
+  <footer class="row" ng-include="'../view/footer.html'"></footer>
+</body>
+
+</html>

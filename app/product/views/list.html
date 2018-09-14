@@ -1,0 +1,20 @@
+<div>
+  <h1>Browse the Product Catalog</h1>
+  <span>Category:</span>
+  <select name="category" id="category" ng-model="selectedCategory" ng-options="option.categoryID as option.categoryName for option in categories">
+    <option value="">All categories</option>
+  </select>
+
+  <div>Selected: {{selectedCategory}}</div>
+  <div class="table">
+    <section class="row">
+      <section ng-repeat="category in categories" ng-show="!selectedCategory || category.categoryID == selectedCategory">
+        <h1>{{::category.categoryName}}</h1>
+        <p>{{::category.description}}</p>
+        <div class="row" ng-class="$even ? 'product-item-even' : 'product-item-odd'" ng-repeat="product in products | filter: {categoryID: category.categoryID}:true | orderBy:'productName'">
+          <!-- <nw-product-overview item="product"></nw-product-overview> -->
+        </div>
+      </section>
+    </section>
+  </div>
+</div>

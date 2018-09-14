@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="./about-us.css" />
+
+    <script src="/app/node_modules/angular/angular.min.js"></script>
+    <script src="./main.module.js"></script>
+    <script src="./controllers/about-us.controller.js"></script>
+    <script src="../product/product.controller.js"></script>
+</head>
+
+<body ng-app="main">
+    <section id="map" ng-controller="about-us">
+        <h2 class="head">Our Location</h2>
+        <div>
+            <div class="center-text">(If there is no map here, go to <a ng-attr-href="{{mapUrl}}">the map page</a> and
+                reload.)</div>
+            <img ng-attr-src="{{mapUrl}}" />
+        </div>
+    </section>
+
+    <section id="products" ng-controller="products">
+        <h2 class="head">Products</h2>
+
+        <div id="product-wrapper">
+            <div ng-repeat="product in products" class="item text-center">
+                <a ng-attr-href="product/index.html#/{{product.productID}}">
+                    <div class="img-wrapper">
+                        <img ng-attr-src="/assets/img/productImages/{{product.productID}}.jpg" ng-attr-alt="{{product.productName}}" />
+                    </div>
+                    <h5>{{product.productName}}</h5>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Register</title>
+  <script src="/app/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/app/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/app/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
+  <script src="/app/node_modules/angular/angular.min.js"></script>
+  <script src="./auth.module.js"></script>
+  <script src="./auth.controller.js"></script>
+</head>
+
+<body class="container" ng-app="auth" ng-controller="auth-register">
+  <main class="row">
+
+    <h2>Create a New Account</h2>
+
+    <p class="alert alert-info">
+      Use the form below to create a new account.
+    </p>
+
+    <div>
+      <p class="alert alert-success" ng-show="successMessage">{{successMessage}}</p>
+      <p class="alert alert-danger" ng-show="errorMessage">{{errorMessage}}</p>
+
+      <form ng-submit="doRegister()">
+        <fieldset class="col-md-6">
+          <legend>Account Information</legend>
+          <div class="form-group has-feedback">
+            <label for="username" class="control-label">Username:</label>
+            <input name="username" class="form-control" pattern="^\w+$" required ng-model="username" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="email" class="control-label">E-mail:</label>
+            <input type="email" name="email" class="form-control" required ng-model="email" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="firstName" class="control-label">First (given) Name</label>
+            <input name="firstName" class="form-control" required ng-model="name.first" />
+          </div>
+          <div class="form-group has-feedback">
+            <label for="lastName" class="control-label">Last (family) Name</label>
+            <input name="lastName" class="form-control" required ng-model="name.last" />
+          </div>
+          <div class="form-group has-feedback">
+            <label for="password" id="PasswordLabel" class="control-label">Password:</label>
+            <input type="password" name="password" class="form-control" required ng-model="pass" />
+          </div>
+          <div class="form-group has-feedback">
+            <label for="confirmPassword" id="confirmPasswordLabel" class="control-label">Confirm Password:</label>
+            <input type="password" name="confirmPassword" class="form-control" required />
+          </div>
+        </fieldset>
+        <fieldset class="col-md-6">
+          <legend>
+            My address information
+          </legend>
+
+          <div class="form-group has-feedback">
+            <label for="companyName" class="control-label">Company Name</label>
+            <input ng-model="company" name="companyName" class="form-control" id="companyName" pattern="^.{5,}"
+              required title="Restaurant/cafe name (at least 5 characters)." />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="address" class="control-label">Address</label>
+            <input ng-model="addr.street" name="address" class="form-control" id="address" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="city" class="control-label">City</label>
+            <input ng-model="addr.city" name="city" class="form-control" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="region" class="control-label">Region/State</label>
+            <input ng-model="addr.region" name="region" class="form-control" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="postalCode" class="control-label">Postal Code</label>
+            <input ng-model="addr.postalCode" name="postalCode" class="form-control" />
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="country" class="control-label">Country</label>
+            <input ng-model="addr.country" name="country" class="form-control" />
+          </div>
+        </fieldset>
+
+        <input type="submit" class="btn btn-primary" value="Create User" />
+        <input type="submit" formnovalidate value="Ignore Validation" />
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

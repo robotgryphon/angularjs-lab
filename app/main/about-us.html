@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="./about-us.css" />
+
+    <script src="/app/node_modules/angular/angular.min.js"></script>
+    <script src="./main.module.js"></script>
+    <script src="./controllers/about-us.controller.js"></script>
+</head>
+
+<body ng-app="main" ng-controller="about-us">
+
+    <h1>About {{::company.name}}</h1>
+    <p>Today's date is: {{::timestamp | date : 'medium' }}</p>
+
+    <section>
+        <h2 class="head">Our Address</h2>
+        <div>
+            <address>
+                <div>{{::company.address.street}}</div>
+                <div>{{::company.address.city}}, {{::company.address.state}} {{::company.address.zipcode}}</div>
+            </address>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="head">Other Ways to Contact Us</h2>
+        <div>
+            <dl>
+                <dt>By Phone</dt>
+                <dd>{{::company.phone}}</dd>
+
+                <dt>By Email</dt>
+                <dd>{{::company.emailUser}}@dollarbank.com</dd>
+            </dl>
+        </div>
+    </section>
+
+    <section id="map">
+        <h2 class="head">Our Location</h2>
+        <div>
+            <div class="center-text">(If there is no map here, go to <a ng-attr-href="{{::mapUrl}}">the map page</a>
+                and
+                reload.)</div>
+            <img ng-attr-src="{{::mapUrl}}" />
+        </div>
+    </section>
+</body>
+
+</html>

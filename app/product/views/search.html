@@ -1,0 +1,33 @@
+<h1>Search for products</h1>
+<div class="row">
+  <div class="col-md-8">
+    <div class="form-group">
+      <label for="search">Filter:</label>
+      <input class="form-control" name="search" type="text" id="search" ng-model="searchString" placeholder="Filter">
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select class="form-control" name="category" id="category" ng-model="selectedCategory" ng-options="option.categoryID as option.categoryName for option in categories">
+        <option value="">All categories</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="row hidden-xs">
+    <div class="col-sm-2">Photo</div>
+    <div class="col-sm-5">Name</div>
+    <div class="col-sm-3">Quantity Per Unit</div>
+    <div class="col-sm-2">Price</div>
+  </div>
+
+  <tbody>
+    <div class="product-item row" ng-class="$even ? 'product-item-even' : 'product-item-odd'" ng-repeat="product in products | filter: { productName: searchString, categoryID: selectedCategory }">
+      <!-- <nw-product-overview item="product"></nw-product-overview> -->
+    </div>
+  </tbody>
+</div>

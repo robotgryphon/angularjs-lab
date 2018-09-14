@@ -1,0 +1,14 @@
+.product-item {
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.4em;
+  margin-bottom: 0.6em;
+}
+
+.product-item-even {
+  background-color: cornsilk;
+}
+
+.product-item-odd {
+  background-color: aliceblue;
+}

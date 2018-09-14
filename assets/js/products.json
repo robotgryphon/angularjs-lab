@@ -1,0 +1,127 @@
+[
+  {
+    "productID": 56,
+    "productName": "A fake product",
+    "supplierID": 8,
+    "categoryID": 1,
+    "quantityPerUnit": "Box of 12",
+    "unitPrice": 81,
+    "unitsInStock": 40,
+    "unitsOnOrder": 0,
+    "reorderLevel": 0,
+    "discontinued": 0,
+    "featured": true
+  },
+  {
+    "productID": 12,
+    "productName": "Another fake product",
+    "supplierID": 8,
+    "categoryID": 3,
+    "quantityPerUnit": "Box of 12",
+    "unitPrice": 11.23,
+    "unitsInStock": 40,
+    "unitsOnOrder": 0,
+    "reorderLevel": 0,
+    "discontinued": 0,
+    "featured": true
+  },
+  {
+    "productID": 20,
+    "productName": "Yet another fake product",
+    "supplierID": 8,
+    "categoryID": 2,
+    "quantityPerUnit": "6 pack",
+    "unitPrice": 85.44,
+    "unitsInStock": 40,
+    "unitsOnOrder": 0,
+    "reorderLevel": 0,
+    "discontinued": 0,
+    "featured": true
+  },
+  {
+    "productID": 25,
+    "productName": "A fourth fake product",
+    "supplierID": 8,
+    "categoryID": 4,
+    "quantityPerUnit": "Box of 12",
+    "unitPrice": 81.34,
+    "unitsInStock": 40,
+    "unitsOnOrder": 0,
+    "reorderLevel": 0,
+    "discontinued": 0,
+    "featured": true
+  },
+
+  {
+    "productID": 19,
+    "productName": "Teatime Chocolate Biscuits",
+    "quantityPerUnit": "10 boxes x 12 pieces",
+    "unitPrice": 9.2
+  },
+
+  {
+    "productID": 27,
+    "productName": "Schoggi Schokolade",
+    "quantityPerUnit": "100 - 100 g pieces",
+    "unitPrice": 43.9
+  },
+
+  {
+    "productID": 41,
+    "productName": "Jack's New England Clam Chowder",
+    "quantityPerUnit": "12 - 12 oz cans",
+    "unitPrice": 9.65
+  },
+
+  {
+    "productID": 48,
+    "productName": "Chocolade",
+    "quantityPerUnit": "10 pkgs",
+    "unitPrice": 12.75
+  },
+
+  {
+    "categoryID": 6,
+    "productID": 17,
+    "productName": "Alice Mutton",
+    "quantityPerUnit": "20 - 1 kg tins",
+    "unitPrice": 39.0
+  },
+  {
+    "categoryID": 6,
+    "productID": 9,
+    "productName": "Mishi Kobe Niku",
+    "quantityPerUnit": "18 - 500 g pkgs.",
+    "unitPrice": 97.0
+  },
+  {
+    "categoryID": 6,
+    "productID": 53,
+    "productName": "Perth Pasties",
+    "quantityPerUnit": "48 pieces",
+    "unitPrice": 32.8
+  },
+  {
+    "categoryID": 6,
+    "productID": 55,
+    "productName": "Pâté chinois",
+    "quantityPerUnit": "24 boxes x 2 pies",
+    "unitPrice": 24.0
+  },
+
+  {
+    "categoryID": 6,
+    "productID": 29,
+    "productName": "Thüringer Rostbratwurst",
+    "quantityPerUnit": "50 bags x 30 sausages.",
+    "unitPrice": 123.79
+  },
+
+  {
+    "categoryID": 6,
+    "productID": 54,
+    "productName": "Tourtière",
+    "quantityPerUnit": "16 pies",
+    "unitPrice": 7.45
+  }
+]

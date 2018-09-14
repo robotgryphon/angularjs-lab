@@ -1,0 +1,6 @@
+<div class="product-item row" ng-class="$even ? 'product-item-even' : 'product-item-odd'" ng-repeat="product in products | filter: { productName: searchString, categoryID: selectedCategory }">
+    <div class="col-sm-2"><a href="/app/product/productDetail.html"><img class="img-responsive" ng-src="/assets/img/ProductImages/{{product.productID}}.jpg"></a></div>
+    <div class="col-sm-5"><a href="/app/product/productDetail.html">{{product.productName}}</a></div>
+    <div class="col-sm-3">{{product.quantityPerUnit}}</div>
+    <div class="col-sm-2">{{product.unitPrice | currency:"US $" }}</div>
+</div>
