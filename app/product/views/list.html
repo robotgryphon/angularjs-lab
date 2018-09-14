@@ -11,8 +11,8 @@
       <section ng-repeat="category in categories" ng-show="!selectedCategory || category.categoryID == selectedCategory">
         <h1>{{::category.categoryName}}</h1>
         <p>{{::category.description}}</p>
-        <div class="row" ng-class="$even ? 'product-item-even' : 'product-item-odd'" ng-repeat="product in products | filter: {categoryID: category.categoryID}:true | orderBy:'productName'">
-          <!-- <nw-product-overview item="product"></nw-product-overview> -->
+        <div class="product-item row" ng-class="$even ? 'product-item-even' : 'product-item-odd'" ng-repeat="product in products | filter: {categoryID: category.categoryID}:true | orderBy:'productName'">
+          <nw-product-overview></nw-product-overview>
         </div>
       </section>
     </section>
